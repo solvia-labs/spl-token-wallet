@@ -463,8 +463,8 @@ export function useBalanceInfo(publicKey) {
       decimals: 9,
       mint: null,
       owner: publicKey,
-      tokenName: 'SOL',
-      tokenSymbol: 'SOL',
+      tokenName: 'SOLVIA',
+      tokenSymbol: 'SOLVIA',
       valid: true,
     };
   }

@@ -72,7 +72,7 @@ export default function NavigationFrame({ children }) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title} component="h1">
-            {isExtensionWidth ? 'Sollet' : 'Solana SPL Token Wallet'}
+            {isExtensionWidth ? 'Solvia Wallet' : 'Solvia SPL Token Wallet'}
           </Typography>
           <NavigationButtons />
         </Toolbar>

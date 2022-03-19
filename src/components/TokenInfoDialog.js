@@ -50,7 +50,7 @@ export default function TokenInfoDialog({
             target="_blank"
             rel="noopener"
           >
-            View on Solana Explorer
+            View on Solvia Explorer
           </Link>
         </Typography>
         {!!mint && (

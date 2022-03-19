@@ -4,7 +4,7 @@ export default function TokenIcon({ mint, url, tokenName, size = 20 }) {
   const [hasError, setHasError] = useState(false);
 
   if (!url && mint === null) {
-    url = 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png';
+    url = 'https://media.discordapp.net/attachments/918655571694080020/918655663838736394/solvia-icon-bg.png';
   }
 
   if (hasError || !url) {

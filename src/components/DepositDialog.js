@@ -48,7 +48,7 @@ export default function DepositDialog({
     let firstTab = `SPL ${tokenSymbol ?? swapInfo.coin.ticker}`;
     let secondTab = swapInfo.coin.ticker;
     if (!mint) {
-      firstTab = 'SOL';
+      firstTab = 'SOLVIA';
     } else {
       secondTab = `${
         swapInfo.coin.erc20Contract ? 'ERC20' : 'Native'
@@ -91,7 +91,7 @@ export default function DepositDialog({
             {!displaySolAddress && isAssociatedToken === false ? (
               <DialogContentText>
                 This address can only be used to receive{' '}
-                {tokenSymbol ?? abbreviateAddress(mint)}. Do not send SOL to
+                {tokenSymbol ?? abbreviateAddress(mint)}. Do not send SOLVIA to
                 this address.
               </DialogContentText>
             ) : (
@@ -115,7 +115,7 @@ export default function DepositDialog({
                 target="_blank"
                 rel="noopener"
               >
-                View on Solana Explorer
+                View on Solvia Explorer
               </Link>
             </DialogContentText>
           </>
@@ -195,7 +195,7 @@ function SolletSwapDepositAddress({ balanceInfo, swapInfo, ethAccount }) {
         <DialogContentText>
           {coin.erc20Contract ? 'ERC20' : 'Native'} {coin.ticker} can be
           converted to {mint ? 'SPL' : 'native'} {tokenName} via MetaMask. To
-          convert, you must already have SOL in your wallet.
+          convert, you must already have SOLVIA in your wallet.
         </DialogContentText>
         <DialogContentText>
           Estimated withdrawal transaction fee:

@@ -184,7 +184,7 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
   const defaultAddressHelperText =
     !balanceInfo.mint || balanceInfo.mint.equals(WRAPPED_SOL_MINT)
       ? 'Enter Solana Address'
-      : 'Enter SPL token or Solana address';
+      : 'Enter SPL token or Solvia address';
   const wallet = useWallet();
   const [sendTransaction, sending] = useSendTransaction();
   const [addressHelperText, setAddressHelperText] = useState(

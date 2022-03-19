@@ -35,7 +35,7 @@ export default function DebugButtons() {
           refreshAccountInfo(wallet.connection, wallet.publicKey);
         },
         successMessage:
-          'Success! Please wait up to 30 seconds for the SOL tokens to appear in your wallet.',
+          'Success! Please wait up to 30 seconds for the SOLVIA tokens to appear in your wallet.',
       },
     );
   }
@@ -68,8 +68,8 @@ export default function DebugButtons() {
       <Tooltip
         title={
           requestAirdropDisabled
-            ? 'Receive some devnet SOL for free. Only enabled on the devnet'
-            : 'Receive some devnet SOL for free'
+            ? 'Receive some devnet SOLVIA for free. Only enabled on the devnet'
+            : 'Receive some devnet SOLVIA for free'
         }
       >
         <span>
@@ -86,7 +86,7 @@ export default function DebugButtons() {
       <Tooltip
         title={
           noSol
-            ? 'Generate and receive balances in a new test token. Requires SOL balance'
+            ? 'Generate and receive balances in a new test token. Requires SOLVIA balance'
             : 'Generate and receive balances in a new test token'
         }
       >

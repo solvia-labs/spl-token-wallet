@@ -323,7 +323,7 @@ export async function transferTokens({
     (!destinationAccountInfo || destinationAccountInfo.lamports === 0) &&
     !overrideDestinationCheck
   ) {
-    throw new Error('Cannot send to address with zero SOL balances');
+    throw new Error('Cannot send to address with zero SOLVIA balances');
   }
   const destinationSplTokenAccount = (
     await getOwnedTokenAccounts(connection, destinationPublicKey)

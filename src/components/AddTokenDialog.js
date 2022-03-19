@@ -116,7 +116,7 @@ export default function AddTokenDialog({ open, onClose }) {
         {tokenAccountCost ? (
           <DialogContentText>
             Add a token to your wallet. This will cost{' '}
-            {feeFormat.format(tokenAccountCost / LAMPORTS_PER_SOL)} SOL.
+            {feeFormat.format(tokenAccountCost / LAMPORTS_PER_SOL)} SOLVIA.
           </DialogContentText>
         ) : (
           <LoadingIndicator />

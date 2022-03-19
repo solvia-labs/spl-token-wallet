@@ -543,7 +543,7 @@ function BalanceListItemDetails({
 
   // Only show the export UI for the native SOL coin.
   const exportNeedsDisplay =
-    mint === null && tokenName === 'SOL' && tokenSymbol === 'SOL';
+    mint === null && tokenName === 'SOLVIA' && tokenSymbol === 'SOLVIA';
 
   const market = tokenSymbol
     ? serumMarkets[tokenSymbol.toUpperCase()]
@@ -586,7 +586,7 @@ function BalanceListItemDetails({
               target="_blank"
               rel="noopener"
             >
-              View on Solana
+              View on Solvia
             </Link>
           </Typography>
           {market && (
