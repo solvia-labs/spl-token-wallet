@@ -580,7 +580,7 @@ function BalanceListItemDetails({
           <Typography variant="body2">
             <Link
               href={
-                `https://explorer.solana.com/account/${publicKey.toBase58()}` +
+                `https://explorer.solvia.io/account/${publicKey.toBase58()}` +
                 urlSuffix
               }
               target="_blank"
