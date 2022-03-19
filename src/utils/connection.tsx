@@ -18,6 +18,8 @@ const ConnectionContext = React.createContext<{
 } | null>(null);
 
 export const MAINNET_URL = 'https://api.mainnet-beta.solvia.io';
+export const TESTNET_URL = 'https://api.testnet.solvia.io';
+export const DEVNET_URL = 'https://api.devnet.solvia.io';
 export function ConnectionProvider({ children }) {
   const [endpoint, setEndpoint] = useLocalStorageState(
     'connectionEndpoint',
@@ -65,9 +67,9 @@ export function useSolanaExplorerUrlSuffix() {
     throw new Error('Missing connection context');
   }
   const endpoint = context.endpoint;
-  if (endpoint === clusterApiUrl('devnet')) {
+  if (endpoint === DEVNET_URL) {
     return '?cluster=devnet';
-  } else if (endpoint === clusterApiUrl('testnet')) {
+  } else if (endpoint === TESTNET_URL) {
     return '?cluster=testnet';
   }
   return '';

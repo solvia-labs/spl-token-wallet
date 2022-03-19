@@ -1,5 +1,5 @@
 import { clusterApiUrl } from '@solana/web3.js';
-import { MAINNET_URL } from '../utils/connection';
+import { MAINNET_URL, DEVNET_URL, TESTNET_URL } from '../utils/connection';
 
 export const CLUSTERS = [
   {
@@ -9,12 +9,12 @@ export const CLUSTERS = [
   },
   {
     name: 'devnet',
-    apiUrl: clusterApiUrl('devnet'),
+    apiUrl: DEVNET_URL,
     label: 'Devnet'
   },
   {
     name: 'testnet',
-    apiUrl: clusterApiUrl('testnet'),
+    apiUrl: TESTNET_URL,
     label: 'Testnet'
   },
   {
