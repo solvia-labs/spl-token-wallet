@@ -183,7 +183,7 @@ export default function SendDialog({ open, onClose, publicKey, balanceInfo }) {
 function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
   const defaultAddressHelperText =
     !balanceInfo.mint || balanceInfo.mint.equals(WRAPPED_SOL_MINT)
-      ? 'Enter Solana Address'
+      ? 'Enter Solvia Address'
       : 'Enter SPL token or Solvia address';
   const wallet = useWallet();
   const [sendTransaction, sending] = useSendTransaction();
@@ -231,7 +231,7 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
           }
         } else {
           setPassValidation(true);
-          setAddressHelperText('Destination is a Solana address');
+          setAddressHelperText('Destination is a Solvia address');
         }
       } catch (e) {
         console.log(`Received error validating address ${e}`);

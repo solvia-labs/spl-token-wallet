@@ -405,7 +405,7 @@ function ApproveConnectionForm({ origin, onApprove }) {
     <Card>
       <CardContent>
         <Typography variant="h6" component="h1" gutterBottom>
-          Allow this site to access your Solana account?
+          Allow this site to access your Solvia account?
         </Typography>
         <div className={classes.connection}>
           <Typography>{origin}</Typography>

@@ -99,7 +99,7 @@ function SeedWordsForm({ mnemonicAndSeed, goForward }) {
           Create New Wallet
         </Typography>
         <Typography paragraph>
-          Create a new wallet to hold Solana and SPL tokens.
+          Create a new wallet to hold Solvia and SPL tokens.
         </Typography>
         <Typography>
           Please write down the following twenty four words and keep them in a
