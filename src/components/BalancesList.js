@@ -36,6 +36,7 @@ import SortIcon from '@material-ui/icons/Sort';
 import AddTokenDialog from './AddTokenDialog';
 import ExportAccountDialog from './ExportAccountDialog';
 import SendDialog from './SendDialog';
+import StakeDialog from './StakeDialog';
 import DepositDialog from './DepositDialog';
 import {
   useIsProdNetwork,
@@ -98,6 +99,7 @@ export default function BalancesList() {
   const wallet = useWallet();
   const [publicKeys, loaded] = useWalletPublicKeys();
   const [showAddTokenDialog, setShowAddTokenDialog] = useState(false);
+  const [showStakeDialog, setShowStakeDialog] = useState(false);
   const [showEditAccountNameDialog, setShowEditAccountNameDialog] = useState(
     false,
   );
@@ -210,6 +212,14 @@ export default function BalancesList() {
                 </IconButton>
               </Tooltip>
             )}
+          <Tooltip title="Stake SOLVIA" arrow>
+            <IconButton
+              size={iconSize}
+              onClick={() => setShowStakeDialog(true)}
+            >
+              <AddIcon />
+            </IconButton>
+          </Tooltip>
           <Tooltip title="Merge Tokens" arrow>
             <IconButton
               size={iconSize}
@@ -273,6 +283,10 @@ export default function BalancesList() {
       <AddTokenDialog
         open={showAddTokenDialog}
         onClose={() => setShowAddTokenDialog(false)}
+      />
+      <StakeDialog
+        open={showStakeDialog}
+        onClose={() => setShowStakeDialog(false)}
       />
       <EditAccountNameDialog
         open={showEditAccountNameDialog}
@@ -543,7 +557,7 @@ function BalanceListItemDetails({
 
   // Only show the export UI for the native SOL coin.
   const exportNeedsDisplay =
-    mint === null && tokenName === 'SOLVIA' && tokenSymbol === 'SOLVIA';
+    mint === null && tokenName === 'SOLVIA' && tokenSymbol === 'SVA';
 
   const market = tokenSymbol
     ? serumMarkets[tokenSymbol.toUpperCase()]

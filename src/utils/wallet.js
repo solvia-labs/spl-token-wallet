@@ -15,6 +15,7 @@ import {
   nativeTransfer,
   transferTokens,
   transferAndClose,
+  signAndSendTransaction,
 } from './tokens';
 import { TOKEN_PROGRAM_ID } from './tokens/instructions';
 import {
@@ -131,6 +132,16 @@ export class Wallet {
       sourcePublicKey: publicKey,
       skipPreflight,
     });
+  };
+
+  signandSendTransaction = async (transaction, signers, skipPreflight = false) => {
+    return await signAndSendTransaction(
+      this.connection,
+      transaction,
+      this,
+      signers,
+      skipPreflight,
+    );
   };
 
   transferAndClose = async (source, destination, amount) => {
@@ -464,7 +475,7 @@ export function useBalanceInfo(publicKey) {
       mint: null,
       owner: publicKey,
       tokenName: 'SOLVIA',
-      tokenSymbol: 'SOLVIA',
+      tokenSymbol: 'SVA',
       valid: true,
     };
   }

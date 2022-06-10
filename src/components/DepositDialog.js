@@ -63,7 +63,6 @@ export default function DepositDialog({
         indicatorColor="primary"
       >
         <Tab label={firstTab} />
-        <Tab label={secondTab} />
       </Tabs>
     );
   }
@@ -86,7 +85,6 @@ export default function DepositDialog({
       </DialogTitle>
       {tabs}
       <DialogContent style={{ paddingTop: 16 }}>
-        {tab === 0 ? (
           <>
             {!displaySolAddress && isAssociatedToken === false ? (
               <DialogContentText>
@@ -119,13 +117,7 @@ export default function DepositDialog({
               </Link>
             </DialogContentText>
           </>
-        ) : (
-          <SolletSwapDepositAddress
-            balanceInfo={balanceInfo}
-            swapInfo={swapInfo}
-            ethAccount={ethAccount}
-          />
-        )}
+
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Close</Button>
