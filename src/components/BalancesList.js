@@ -26,6 +26,7 @@ import ReceiveIcon from '@material-ui/icons/WorkOutline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import AddIcon from '@material-ui/icons/Add';
+import AccountBalance from '@material-ui/icons/AccountBalance';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/InfoOutlined';
@@ -212,12 +213,12 @@ export default function BalancesList() {
                 </IconButton>
               </Tooltip>
             )}
-          <Tooltip title="Stake SOLVIA" arrow>
+          <Tooltip title="Stake Manager" arrow>
             <IconButton
               size={iconSize}
               onClick={() => setShowStakeDialog(true)}
             >
-              <AddIcon />
+              <AccountBalance />
             </IconButton>
           </Tooltip>
           <Tooltip title="Merge Tokens" arrow>
