@@ -56,6 +56,7 @@ import TokenIcon from './TokenIcon';
 import EditAccountNameDialog from './EditAccountNameDialog';
 import MergeAccountsDialog from './MergeAccountsDialog';
 
+
 const balanceFormat = new Intl.NumberFormat(undefined, {
   minimumFractionDigits: 4,
   maximumFractionDigits: 4,
@@ -357,6 +358,26 @@ export function BalanceListItem({ publicKey, expandable, setUsdValue }) {
               console.error(err);
               setPrice(null);
             });
+        }
+        else if(coin === 'SVA'){
+          try {
+            const response = fetch('https://api.coingecko.com/api/v3/coins/solvia', {
+              method: 'GET',
+              headers: {
+                Accept: 'application/json',
+              },
+            }).then(x => x.json()
+              .then(data => {
+                let svaprice = data.market_data.current_price.usd;
+                setPrice(svaprice);
+                })
+          );
+
+          } catch (error) {
+              console.log('error message: ', error.message);
+            setPrice(null);
+            }
+
         }
         // No Serum market exists.
         else {
